@@ -1,0 +1,26 @@
+alias: Info Display
+description: ""
+triggers:
+  - domain: homematicip_local
+    device_id: a558c8247a973e794eb0d82e299e712d
+    event_type: homematic.keypress
+    address: REQ0910714
+    device_type: HM-Dis-WM55
+    interface_id: Homematic-BidCos-RF
+    type: press_short
+    subtype: 1
+    trigger: device
+  - domain: homematicip_local
+    device_id: a558c8247a973e794eb0d82e299e712d
+    event_type: homematic.keypress
+    address: REQ0910714
+    model: HM-Dis-WM55
+    interface_id: Homematic-BidCos-RF
+    type: press_short
+    subtype: 2
+    trigger: device
+conditions: []
+actions:
+  - data: {}
+    action: python_script.jamavilla_display
+mode: single
